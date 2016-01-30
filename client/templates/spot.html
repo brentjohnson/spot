@@ -1,0 +1,20 @@
+<head>
+  <title>spot</title>
+</head>
+
+<body>
+  <h1>Welcome to SPOT!</h1>
+
+  <table>
+  	<tr><th>Coordinator</th><th>Dog's name</th></tr>
+	  {{#each animals}}
+	    {{> animal}}
+	  {{/each}}
+  </table>
+</body>
+
+<template name="animal">
+
+  <tr><td>{{Coordinator}}</td><td>{{name}}</td></tr>
+ 
+</template>
