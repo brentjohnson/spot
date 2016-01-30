@@ -3,18 +3,15 @@
 </head>
 
 <body>
-  <h1>Welcome to SPOT!</h1>
+  <h1>Welcome to SPOT</h1>
 
-  <table>
-  	<tr><th>Coordinator</th><th>Dog's name</th></tr>
-	  {{#each animals}}
-	    {{> animal}}
-	  {{/each}}
-  </table>
+ 
+  {{>animaltable}}
 </body>
 
-<template name="animal">
+<template name="animaltable">
 
-  <tr><td>{{Coordinator}}</td><td>{{name}}</td></tr>
+ 
+	  {{> reactiveTable settings=settings }}
  
 </template>

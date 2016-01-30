@@ -1,13 +1,16 @@
 Meteor.subscribe('animals');
 
-Template.body.helpers({
+Template.animaltable.helpers({
   animals: function () {
-    return Animals.find({});
-  }
+    return Animals;
+  },
+      settings: function () {
+        return {
+            collection: Animals,
+            rowsPerPage: 10,
+            showFilter: true,
+            fields: ['Coordinator', 'Name of Foster', 'Dog\'s Name']
+        };
+    }
 });
 
-Template.animal.helpers({
-  name: function () {
-    return this['Dog\'s Name'];
-  }
-})
